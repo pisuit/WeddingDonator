@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+		<property name="hibernate.connection.driver_class">oracle.jdbc.driver.OracleDriver</property>
+<!-- 		<property name="hibernate.connection.driver_class">com.p6spy.engine.spy.P6SpyDriver</property> -->
+<!-- 		<property name="hibernate.connection.driver_class">net.sf.log4jdbc.DriverSpy</property> -->
+<!-- 		<property name="hibernate.connection.url">jdbc:log4jdbc:oracle:thin:@localhost:1521:xe</property> -->
+		<property name="hibernate.connection.url">jdbc:oracle:thin:@localhost:1521:xe</property>
+		<property name="hibernate.connection.username">tfuser</property>
+		<property name="hibernate.connection.password">oracle</property>
+		<property name="hibernate.dialect">org.hibernate.dialect.OracleDialect</property>
+		<property name="hibernate.show_sql">true</property>
+		<property name="hibernate.format_sql">true</property>
+		<property name="use_sql_comments">true</property>
+		
+		<mapping class="tf.model.Donator"/>
+	</session-factory>
+</hibernate-configuration>
